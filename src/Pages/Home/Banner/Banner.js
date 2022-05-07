@@ -16,7 +16,7 @@ const Banner = () => {
         <Carousel activeIndex={index} onSelect={handleSelect}>
             {
                 banners.map(banner => <Carousel.Item>
-                    <img className="d-block w-100" src={banner.image} alt="First slide" height={500} />
+                    <img className="d-block w-100 mx-auto" src={banner.image} alt="First slide" height={650} />
                     <Carousel.Caption>
                         <h3>{banner.name}</h3>
                         <p>{banner.supplierName}</p>
@@ -27,5 +27,5 @@ const Banner = () => {
         </Carousel>
     );
 };
-
+//
 export default Banner;
