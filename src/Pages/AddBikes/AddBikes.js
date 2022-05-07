@@ -6,7 +6,7 @@ const AddBikes = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        const url = `https://localhost:5000/bikes`;
+        const url = `http://localhost:5000/bikes`;
         fetch(url,{
             method:'POST',
             headers:{"content-type":"application/json"},
@@ -18,12 +18,12 @@ const AddBikes = () => {
             <h2>This is the place to add</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column">
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
-                <textarea className='mb-2' placeholder='Description' {...register("about")} />
-                <input className='mb-2' placeholder='Availability' type="number" {...register("isAvailable")} />
-                <input className='mb-2' placeholder='Price' type="number" {...register("cost")} />
-                <input className='mb-2' placeholder='Address' type="text" {...register("address")} />
-                <input className='mb-2' placeholder='Photo URL' type="text" {...register("picture")} />
-                <input type="submit" value="Add Bikes" />
+                <textarea className='mb-2' placeholder='Description' {...register("description")} />
+                <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
+                <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
+                <input className='mb-2' placeholder='Supplier Name' type="text" {...register("supplierName")} />
+                <input className='mb-2' placeholder='Photo URL' type="text" {...register("image")} />
+                <input type="submit" value="Add the Bike" />
             </form>
         </div>
     );

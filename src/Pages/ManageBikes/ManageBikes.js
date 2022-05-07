@@ -9,7 +9,7 @@ const ManageBikes = () => {
         // const proceed = window.confirm('Are you sure?');
         // if(proceed){}
 
-        fetch(`https://localhost:5000/bikes/${id}`, {
+        fetch(`http://localhost:5000/bikes/${id}`, {
             method: 'DELETE'
         }).then(res => res.json()).then(data => {
             const remaining = bikes.filter(bike => bike._id !== id);
