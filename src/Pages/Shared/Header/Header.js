@@ -30,17 +30,16 @@ const Header = () => {
                             <Nav.Link as={Link} to="blogs" className='text-white'><div className='headerNav'>Blogs</div></Nav.Link>
                         </Nav>
                         <Nav>
-                            <Nav.Link as={Link} to="about" className='text-white'><div className='headerNav'>About</div></Nav.Link>
+                            <Nav.Link as={Link} to="about" className='text-white'><div className='headerNav'><small>About</small></div></Nav.Link>
                             {
                                 user ?
                                     <div className='d-flex align-items-baseline justify-content-center'>
-                                        <Nav.Link as={Link} to="/inventory" className='text-white'><div className='headerNav'>Inventory</div></Nav.Link>
-                                        <Nav.Link as={Link} to="/myItems" className='text-white'><div className='headerNav'>My Items</div></Nav.Link>
-                                        <Nav.Link as={Link} to="add" className='text-white'><div className='headerNav'>Add Bike</div></Nav.Link>
-                                        <Nav.Link as={Link} to="manage" className='text-white'><div className='headerNav'>Manage Bikes</div></Nav.Link>
+                                        <Nav.Link as={Link} to="/inventory" className='text-white'><div className='headerNav'><small>Inventory</small></div></Nav.Link>
+                                        <Nav.Link as={Link} to="/myItems" className='text-white'><div className='headerNav'><small>My Items</small></div></Nav.Link>
+                                        <Nav.Link as={Link} to="/add" className='text-white'><div className='headerNav'><small>Add Bike</small></div></Nav.Link>
+                                        <Nav.Link as={Link} to="/manage" className='text-white'><div className='headerNav'><small>Manage Bikes</small></div></Nav.Link>
                                         <span className='rounded bg-light py-1 px-2'>{user?.displayName}</span>
                                         <button className='btn btn-link bg-white mx-2 text-decoration-none text-danger' onClick={handleSignOut}>sign out</button>
-
                                     </div>
                                     :
                                     <Nav.Link as={Link} to="login">
