@@ -1,0 +1,11 @@
+.navs>*{
+    color: white;
+}
+.headerNav{
+    border-radius: 4px;
+    padding: 2px;
+}
+.headerNav:hover{
+    color: black;
+    background-color: bisque;
+}

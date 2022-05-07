@@ -1,0 +1,8 @@
+.update-button:hover{
+    background-color: cornflowerblue;
+    color: white;
+}
+.update-button{
+    background-color:azure;
+    color: rgb(52, 117, 238);
+}
