@@ -6,6 +6,7 @@ const Bike = ({ service }) => {
     // const {_id, name, picture, about, cost, address, isAvailable} = service;
     const { _id, name, image, description, price, quantity, supplierName } = service;
     const navigate = useNavigate();
+    
 
     const navigateToServiceDetail = id => {
         navigate(`/bikes/${id}`);
