@@ -24,7 +24,7 @@ const Register = () => {
     }
 
     if (user) {
-     console.log('user', user);  
+    //  console.log('user', user);  
     }
 
     const handleRegister = async (event) => {

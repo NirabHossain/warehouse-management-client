@@ -54,8 +54,6 @@ const ManageBikes = () => {
                         </div>)
                     }
                 </div>
-
-
             </div>
         </div>
     );

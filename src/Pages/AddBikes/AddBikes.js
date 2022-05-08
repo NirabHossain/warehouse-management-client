@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 const AddBikes = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
-        console.log(data);
+        // console.log(data);
         const url = `http://localhost:5000/bikes`;
         fetch(url,{
             method:'POST',
