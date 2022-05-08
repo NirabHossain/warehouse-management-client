@@ -8,7 +8,7 @@ const MyItems = () => {
     const [user] = useAuthState(auth);
     const email = user?.email;
     useEffect(() => {
-        const url = `http://localhost:5000/bikes`;
+        const url = `https://young-stream-48716.herokuapp.com/bikes/`;
         fetch(url).then(res => res.json()).then(data =>setMyItem(data))
     }, [email])
     const userItem = myItem.filter(item=>item.email===user.email);

@@ -7,7 +7,7 @@ const BikesCheckout = () => {
     const [bike, setBike] = useBike(bikeId);
     // Updating to server
     const updateToServer =(bike)=>{
-        const url = `http://localhost:5000/bikes/${bikeId}`;
+        const url = `https://young-stream-48716.herokuapp.com/bikes/${bikeId}`;
         fetch(url, {
             method: 'PUT',
             headers: { "content-type": "application/json" },

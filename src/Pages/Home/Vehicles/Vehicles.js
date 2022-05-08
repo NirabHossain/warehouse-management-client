@@ -5,7 +5,7 @@ import Vehicle from '../Vehicle/Vehicle';
 const Vehicles = () => {
     const [vehicles, setVehicles]=useState([]);
     useEffect(()=>{
-        fetch('http://localhost:5000/vehicles').then(res=>res.json()).then(data=>setVehicles(data));
+        fetch('https://young-stream-48716.herokuapp.com/vehicles').then(res=>res.json()).then(data=>setVehicles(data));
     })
     return (
         <div id="vehicles" className='container mb-5 pb-5 experts'>

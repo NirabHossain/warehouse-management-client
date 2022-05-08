@@ -12,7 +12,7 @@ const AddBikes = () => {
     const email = user?.email;
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/bikes`;
+        const url = `"https://young-stream-48716.herokuapp.com/bikes"`;
         console.log(data);
         fetch(url,{
             method:'POST',

@@ -11,7 +11,7 @@ const ManageBikes = () => {
         // const proceed = window.confirm('Are you sure?');
         // if(proceed){}
 
-        fetch(`http://localhost:5000/bikes/${id}`, {
+        fetch(`https://young-stream-48716.herokuapp.com/bikes/${id}`, {
             method: 'DELETE'
         }).then(res => res.json()).then(data => {
             const remaining = bikes.filter(bike => bike._id !== id);
