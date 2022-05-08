@@ -3,30 +3,25 @@ import React from 'react';
 const Blogs = () => {
     return (
         <div className='p-5'>
-            <h3>What is the difference between authentication and authorization?</h3>
+            <h3>JS vs Node.js</h3>
             <p>
-                While authentication and authorization are often used interchangeably, they are separate processes used to protect an organization from cyber-attacks. 
-
-                In a word, authentication is done first and then authorization comes. Authentication is mainly done by user while authorization is controlled by developers
-                Authentication verifies who the user is.	Authorization determines what resources a user can access.
-
-                Verifying email address to take money from digital payment is an example of authentication.
-                Giving someone permission to download a particular file on a server or <strong>making someone admin in a particular facebook page</strong> are good examples of authorization.
+                Javascript (JS) is an object-oriented scripting language allowing making changes to a HTML website to make it dynamic. On the other hand, NodeJS  represents a list of objects and methods accessible to JavaScript code when run in the V8 engine or via the node interpreter. JS is a browser's language which can only be valid in the browser's front-end. Nodejs is also a browser's language which can access both the <strong>Client Side</strong> and the <strong>Server Side</strong>. Both are needed to develop a website properly.
             </p>
-            <h3>Why are you using firebase? What other options do you have to implement authentication?</h3>
+            <h3>When to use Nodejs and MongoDB?</h3>
             <p>
-                Actually authentication requires password security to make secure connection with users. If user's password can be known from a system, that might harm to users because of being able to do anything with that password. Google provides <strong>firebase</strong> system to help us protecting the user information. There are many systems where we can store our user information, not just google. Also we can use our own authentication system using <strong> cryptographic algorithms</strong>. For reliability, firebase is a good choice to put our trust
+                Node.js is needed to connect the <strong>client-side</strong> with the <strong>server-side</strong>. But <strong>MongoDB</strong> is the database server where we can store a data and can call the data from the local browser using <strong>Node.js</strong>. So the combination of these two tools are hugely needed to make a dynamic website user friendly.
             </p>
-            <h3>What other Bikes do firebase provide?</h3>
+            <h3>SQL vs NOSQL Databases</h3>
             <p>
-                There are many Bikes of firebase other than just authentication. Some of these are listed as follows:
+                There are five basic practical differences between SQL and NoSQL:
                 <ul>
-                    <li>Cloud Firestore </li>
-                    <li>Remote Config</li>
-                    <li>Firebase ML</li>
-                    <li>Cloud Messaging</li>
-                    <li>Hosting</li>
+                    <li>Language: SQL is very old allowing highly suited recognized database with complex queries. Nosql is just flexible but it lacks standard interface.</li>
+                    <li>Scalability: SQL databases can be scaled vertically, by increasing the processing power of existing hardware. NoSQL databases use a master-slave architecture which scales better horizontally, with additional servers or nodes.</li>
+                    <li>Structure: Their structures are different. Nosql uses key value pair while SQL using columns</li>
+                    <li>Properties: There are difference of many basice properties like <strong>durability, consistency etc</strong></li>
+                    <li>There is a whole different bunch of Supports and communities</li>
                 </ul>
+                
             </p>
         </div >
     );

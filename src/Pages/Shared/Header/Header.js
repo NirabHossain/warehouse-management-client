@@ -34,7 +34,7 @@ const Header = () => {
                             {
                                 user ?
                                     <div className='d-flex align-items-baseline justify-content-center'>
-                                        <Nav.Link as={Link} to="/inventory" className='text-white'><div className='headerNav'><small>Inventory</small></div></Nav.Link>
+                                        <Nav.Link as={Link} to="/bikes" className='text-white'><div className='headerNav'><small>See All</small></div></Nav.Link>
                                         <Nav.Link as={Link} to="/myItems" className='text-white'><div className='headerNav'><small>My Items</small></div></Nav.Link>
                                         <Nav.Link as={Link} to="/add" className='text-white'><div className='headerNav'><small>Add Bike</small></div></Nav.Link>
                                         <Nav.Link as={Link} to="/manage" className='text-white'><div className='headerNav'><small>Manage Bikes</small></div></Nav.Link>

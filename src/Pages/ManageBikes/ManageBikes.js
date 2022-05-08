@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useBikes from '../../hooks/useBikes';
 import Table, { Styles } from '../../Table/Table';
 import './ManageBikes.css';
@@ -42,8 +43,8 @@ const ManageBikes = () => {
 
     return (
         <div className='mb-5 pb-5'>
-            <h2>Manage your favorite Bikes</h2>
-            <div className='d-flex'>
+            <h2 className='text-center'>Manage your favorite Bikes</h2>
+            <div className='d-flex justify-content-center'>
                 <Styles>
                     <Table columns={columns} data={bikes} />
                 </Styles>
@@ -55,6 +56,8 @@ const ManageBikes = () => {
                     }
                 </div>
             </div>
+            <Link to="/add"><button className='w-25 d-block mx-auto py-3 my-2 btn btn-primary'>Add a new Bike</button></Link>
+
         </div>
     );
 };

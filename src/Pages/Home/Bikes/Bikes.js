@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useBikes from '../../../hooks/useBikes';
 import Bike from '../Bike/Bike';
 import './Bikes.css';
@@ -22,6 +23,9 @@ const Bikes = () => {
                     }
                 </div>
             </div>
+
+            <Link to="/manage"><button className='w-100 py-3 my-2 btn btn-primary'>Manage Bikes</button></Link>
+
         </div>
     );
 };

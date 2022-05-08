@@ -40,7 +40,7 @@ function App() {
           </RequireAuth>
         }></Route>
         
-        <Route path="/inventory" element={
+        <Route path="/bikes" element={
           <RequireAuth>
             <Inventory/>
           </RequireAuth>

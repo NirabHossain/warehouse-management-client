@@ -1,10 +1,6 @@
-import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import useBike from '../../hooks/useBike';
-// import Bike from '../Home/Place/Bike';
-// import Bikes from '../../Bikes/Bikes';
-
 const BikesCheckout = () => {
     const { register, handleSubmit } = useForm();
     const { bikeId } = useParams();
@@ -17,7 +13,6 @@ const BikesCheckout = () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify(bike)
         }).then(res => res.json()).then(inf => console.log(inf))
-
     }
 
     const handleDelivered = (bike) => {
@@ -56,6 +51,8 @@ const BikesCheckout = () => {
                 <input type="submit" value="Add quantity" />
             </form>
 
+            <Link to="/manage"><button className='w-25 d-block mx-auto py-3 my-2 btn btn-primary'>Manage Bikes</button></Link>
+            
         </div>
     );
 };
