@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import useBikes from '../../hooks/useBikes';
 import Table, { Styles } from '../../Table/Table';
 import './ManageBikes.css';
@@ -15,6 +16,7 @@ const ManageBikes = () => {
         }).then(res => res.json()).then(data => {
             const remaining = bikes.filter(bike => bike._id !== id);
             setBikes(remaining);
+            toast("Successfully Deleted");
         })
 
     }

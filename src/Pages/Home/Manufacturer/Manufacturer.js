@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const Manufacturer = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data.name);
         const msg = `It's a pleasure to have you as a part of our business ${data.name}. We hope to work together in near future`
-        alert(msg)
+        toast(msg)
     }
     return (
         <div className='w-50 mx-auto my-5'>

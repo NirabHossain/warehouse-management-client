@@ -17,6 +17,7 @@ import AddBikes from './Pages/AddBikes/AddBikes';
 import ManageBikes from './Pages/ManageBikes/ManageBikes';
 import Inventory from './Inventory/Inventory';
 import MyItems from './MyItems/MyItem';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
@@ -65,6 +66,8 @@ function App() {
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
+
     </div>
   );
 }

@@ -1,33 +1,38 @@
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
+import { toast } from 'react-toastify';
 import auth from '../../firebase.init';
 
 
 const AddBikes = () => {
     const { register, handleSubmit } = useForm();
     const [user] = useAuthState(auth);
-    const {displayName, email} = user;
+    const displayName = user?.displayName;
+    const email = user?.email;
 
     const onSubmit = data => {
         const url = `http://localhost:5000/bikes`;
+        console.log(data);
         fetch(url,{
             method:'POST',
             headers:{"content-type":"application/json"},
             body:JSON.stringify(data)
-        }).then(res=>res.json()).then(inf=>console.log(inf))
+        }).then(res=>res.json()).then(inf=>{
+            if(inf.insertedId)toast("Successfully Added");
+        })
     }
     return (
         <div className='w-50 mx-auto'>
             <h2>Add your favorite bike</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column">
-                <input className='mb-2' value={displayName} readOnly disabled {...register("userName", { required: true, maxLength: 20, })} />
-                <input className='mb-2' value={email} readOnly  disabled {...register("email", { required: true, maxLength: 20 })} />
+                <input className='mb-2' value={displayName} readOnly {...register("userName", { required: true, maxLength: 20, })} />
+                <input className='mb-2' value={email} readOnly {...register("email", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />
                 <input className='mb-2' placeholder='Quantity' type="number" {...register("quantity")} />
-                <input className='mb-2' placeholder='Supplier Name' type="text" {...register("supplierName")} />
+                <input className='mb-2' placeholder='Manufacturer' type="text" {...register("supplierName")} />
                 <input className='mb-2' placeholder='Photo URL' type="text" {...register("image")} />
                 <input type="submit" value="Add the Bike" />
             </form>

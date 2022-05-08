@@ -1,5 +1,6 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
+import { toast } from 'react-toastify';
 
 const ShareHolder = () => {
     const { register, handleSubmit } = useForm();
@@ -7,7 +8,7 @@ const ShareHolder = () => {
 
         console.log(data.name);
         const msg = `Thank you, ${data.name}!! We will contact you soon`
-        alert(msg)
+        toast(msg)
     }
     return (
         <div className='w-50 mx-auto my-5'>
