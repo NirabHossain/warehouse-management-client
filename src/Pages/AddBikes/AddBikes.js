@@ -1,11 +1,15 @@
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
+import auth from '../../firebase.init';
 
 
 const AddBikes = () => {
     const { register, handleSubmit } = useForm();
+    const [user] = useAuthState(auth);
+    const {displayName, email} = user;
+
     const onSubmit = data => {
-        // console.log(data);
         const url = `http://localhost:5000/bikes`;
         fetch(url,{
             method:'POST',
@@ -15,8 +19,10 @@ const AddBikes = () => {
     }
     return (
         <div className='w-50 mx-auto'>
-            <h2>This is the place to add</h2>
+            <h2>Add your favorite bike</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="d-flex flex-column">
+                <input className='mb-2' value={displayName} readOnly disabled {...register("userName", { required: true, maxLength: 20, })} />
+                <input className='mb-2' value={email} readOnly  disabled {...register("email", { required: true, maxLength: 20 })} />
                 <input className='mb-2' placeholder='Name' {...register("name", { required: true, maxLength: 20 })} />
                 <textarea className='mb-2' placeholder='Description' {...register("description")} />
                 <input className='mb-2' placeholder='Price' type="number" {...register("price")} />

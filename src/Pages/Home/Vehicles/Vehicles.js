@@ -11,7 +11,7 @@ const Vehicles = () => {
         <div id="vehicles" className='container mb-5 pb-5 experts'>
             <h2 className='text-primary text-center mt-5'>Offered Buying Vehicle Types</h2>
             <div className="row">
-                {vehicles.map(vehicle => <Vehicle key={vehicle.id} vehicle= {vehicle}></Vehicle>)}
+                {vehicles.map(vehicle => <Vehicle key={vehicle._id} vehicle= {vehicle}></Vehicle>)}
             </div>
         </div>
     );
